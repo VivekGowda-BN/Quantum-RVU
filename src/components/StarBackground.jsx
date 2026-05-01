@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-export default function ThreeBackground() {
+export default function StarBackground({ density = 1 }) {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +30,8 @@ export default function ThreeBackground() {
 
     // 2. Create Particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 2000;
+    const baseCount = 1200;
+    const particlesCount = Math.floor(baseCount * density);
     
     // x, y, z for each particle
     const posArray = new Float32Array(particlesCount * 3);
@@ -98,7 +99,7 @@ export default function ThreeBackground() {
   return (
     <div 
       ref={mountRef} 
-      className="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
+      className="fixed -top-[5%] left-0 w-full h-[110%] -z-10 pointer-events-none star-background-mount"
     />
   );
 }

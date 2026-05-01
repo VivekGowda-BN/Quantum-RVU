@@ -15,9 +15,54 @@
   }
 }
 
+/* Reveal animations for Intersection Observer */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section layering and fading system */
+.section {
+  position: relative;
+  padding: 120px 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Alternate atmosphere overlay - Extra-wide even spread for 'milky' depth */
+.section-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.03) 65%,
+    rgba(255, 255, 255, 0.015) 85%,
+    transparent 100%
+  );
+
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Global styles */
 body {
   background-color: black;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
 }

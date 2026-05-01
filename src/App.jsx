@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import ThreeBackground from './components/ThreeBackground';
 import Home from './pages/Home';
 import About from './pages/About';
 import Resources from './pages/Resources';
@@ -11,7 +10,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-transparent text-white flex flex-col font-sans relative">
-        <ThreeBackground />
         <Navbar />
         <main className="flex-grow z-0">
           <Routes>

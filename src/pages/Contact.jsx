@@ -1,25 +1,51 @@
+import StarBackground from '../components/StarBackground';
+
 export default function Contact() {
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4">
-      <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center">Contact Us</h1>
-      <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-        <form className="space-y-6">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-            <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="John Doe" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="john@example.com" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="How can we help you?"></textarea>
-          </div>
-          <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition cursor-pointer">
-            Send Message
-          </button>
-        </form>
+    <div className="min-h-screen text-white pt-32 pb-24 px-4 font-sans relative overflow-hidden">
+      <StarBackground density={1} />
+      <div className="max-w-3xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tighter text-white">Contact</h1>
+          <div className="h-[1px] w-16 bg-white/20 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-400 max-w-xl mx-auto font-light">
+            Inquiries regarding the Quantum Cohort, research collaborations, or admissions.
+          </p>
+        </div>
+
+        <div className="bg-neutral-900/40 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-white/10">
+          <form className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-2">
+                <label className="block text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Full Name</label>
+                <input 
+                  type="text" 
+                  className="w-full bg-black/40 px-5 py-4 rounded-xl border border-white/5 focus:border-blue-500/50 focus:ring-0 outline-none transition-all duration-300 text-white placeholder:text-white/10" 
+                  placeholder="Isaac Newton" 
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Email Address</label>
+                <input 
+                  type="email" 
+                  className="w-full bg-black/40 px-5 py-4 rounded-xl border border-white/5 focus:border-blue-500/50 focus:ring-0 outline-none transition-all duration-300 text-white placeholder:text-white/10" 
+                  placeholder="isaac@cambridge.edu" 
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <label className="block text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Inquiry Details</label>
+              <textarea 
+                rows="5" 
+                className="w-full bg-black/40 px-5 py-4 rounded-xl border border-white/5 focus:border-blue-500/50 focus:ring-0 outline-none transition-all duration-300 text-white placeholder:text-white/10 resize-none" 
+                placeholder="Message regarding research or enrollment..."
+              ></textarea>
+            </div>
+            <button type="submit" className="w-full bg-white text-black font-bold py-4 px-6 rounded-xl hover:bg-gray-200 transition-all duration-300 transform hover:scale-[0.99] active:scale-95 shadow-lg shadow-white/5">
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
