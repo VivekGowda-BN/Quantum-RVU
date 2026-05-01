@@ -110,14 +110,12 @@ export default function Timeline() {
             return (
               <div
                 key={index}
-                className={`timeline-item relative flex flex-col md:flex-row items-start md:items-center ${
-                  isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`timeline-item relative flex flex-col md:flex-row items-start md:items-center ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Card */}
-                <div className={`w-full md:w-[calc(50%-32px)] pl-12 md:pl-0 ${
-                  isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
-                }`}>
+                <div className={`w-full md:w-[calc(50%-32px)] pl-12 md:pl-0 ${isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
+                  }`}>
                   <div className="bg-white/[0.03] border border-white/5 rounded-xl p-6 hover:bg-white/[0.05] transition-colors duration-300">
                     <span className="text-xs font-bold tracking-widest text-gray-500 uppercase">
                       {step.year}
