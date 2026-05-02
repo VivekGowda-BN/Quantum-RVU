@@ -315,10 +315,10 @@ export default function About() {
                 <div className="h-[1px] w-16 bg-white/20 mb-8"></div>
                 <div className="space-y-4">
                   {[
-                    { year: 'Year 1 — Foundations', title: 'Mathematical Tools', desc: 'Linear algebra, differential equations, and classical mechanics.' },
-                    { year: 'Year 2 — Core Quantum', title: 'The Quantum Realm', desc: 'Wave functions, operators, and statistical mechanics.' },
-                    { year: 'Year 3 — Advanced Topics', title: 'Specialized Electives', desc: 'Condensed matter, quantum field theory, and algorithms.' },
-                    { year: 'Year 4 — Research', title: 'Independent Thesis', desc: 'Direct collaboration with faculty on open research problems.' }
+                    { year: 'Year 1', title: 'Mathematical Tools', desc: 'Linear algebra, differential equations, and classical mechanics.' },
+                    { year: 'Year 2', title: 'The Quantum Realm', desc: 'Wave functions, operators, and statistical mechanics.' },
+                    { year: 'Year 3', title: 'Specialized Electives', desc: 'Condensed matter, quantum field theory, and algorithms.' },
+                    { year: 'Year 4', title: 'Independent Thesis', desc: 'Direct collaboration with faculty on open research problems.' }
                   ].map((item, i) => (
                     <div key={i} className="reveal p-5 border border-white/10 bg-neutral-900/50 backdrop-blur-sm rounded-xl transition-all duration-300 ease-out hover:border-white/30 hover:-translate-y-[5px]" style={{ transitionDelay: `${(i+1)*100}ms` }}>
                       <span className="text-[10px] font-bold tracking-widest text-white/40 uppercase block mb-1">{item.year}</span>
